@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Optional npm cache directory
+.npm
+.vscode
+
+# build
+build
+
+# dotenv environment variables file
+.env
+.env.development
+.env.production
+.env.test
+.env.staging

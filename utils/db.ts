@@ -10,7 +10,7 @@ const dbConnect = () => {
     set('strictQuery', true);
     connect(DB, err => {
       if (err) console.log(err);
-      else console.log('DB connection successfull!');
+      else console.log('DB connection successful!');
     });
   } else {
     console.log('DB connection failed!');

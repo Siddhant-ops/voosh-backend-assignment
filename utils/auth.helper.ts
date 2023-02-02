@@ -1,4 +1,4 @@
-import { JwtPayload, sign } from 'jsonwebtoken';
+import { sign } from 'jsonwebtoken';
 import { IPayload, JWT_EXPIRE, JWT_SECRET } from './constants';
 
 export const generateUID = (first: string, second: string) => {

@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { body, check, param } from 'express-validator';
+import { body, check, param, query } from 'express-validator';
 import { verifyToken } from '../utils/order.helper';
 
 const verifyTokenMiddleware = (req: Request, res: Response, next: NextFunction) => {
@@ -24,10 +24,10 @@ const verifyTokenMiddleware = (req: Request, res: Response, next: NextFunction) 
 
 export const addOrderValidation = [
   verifyTokenMiddleware,
-  body('sub_total', 'Sub total is required').exists().isInt().withMessage('Sub total must be a number'),
+  body('total', 'Sub total is required').exists().isInt().withMessage('Sub total must be a number'),
 ];
 
 export const getOrderValidation = [
   verifyTokenMiddleware,
-  param('user_id', 'User id is required').exists().isString().withMessage('User id must be a string'),
+  query('user_id', 'User id is required').exists().isString().withMessage('User id must be a string'),
 ];

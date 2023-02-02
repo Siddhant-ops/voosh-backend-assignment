@@ -31,7 +31,7 @@ router.post('/add-order', [...addOrderValidation], async (req: Request, res: Res
 
     const newOrder = new OrderModel({
       phone: req.payload.phone,
-      total: req.body.sub_total,
+      total: req.body.total,
       uuid: req.payload.uuid,
     });
 
